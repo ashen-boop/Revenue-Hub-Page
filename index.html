@@ -283,20 +283,35 @@
     width: 100%;
   }
 
-  .feature-image {
-    width: 100%;
-    max-width: 720px;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow:
-      0 20px 50px rgba(0, 0, 0, 0.7),
-      0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-    display: block;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
+ .feature-image {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 16px;
+  padding: 10px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 24px 60px -18px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 0 40px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.5s ease,
+              border-color 0.5s ease;
+}
 
+.feature-image:hover {
+  transform: translateY(-6px) scale(1.015);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 40px 90px -20px rgba(0, 0, 0, 0.95),
+    0 0 0 1px rgba(255, 255, 255, 0.12) inset,
+    0 0 60px rgba(255, 255, 255, 0.10);
+}
   .feature-image:hover {
     transform: translateY(-4px) scale(1.01);
     box-shadow:
@@ -836,17 +851,6 @@
 <div class="container" id="home">
   <h1>Revenue Hub</h1>
 
-  <div class="highlight-box">
-    <p style="margin: 0; font-size: 1.05rem;">
-      “You <strong>do not</strong> need just a Beautiful website! But a <strong>Strategic one with true Potential.</strong><br>
-      Only then you can expect <strong>a consistent flow of cash for the smallest investment.</strong><br>
-      That is it. Nothing more than that. Period!<br>
-      We know the recipe for that.<br>
-      Through mixing three ingredients strategically.”<br><br>
-      <strong style="font-style: normal;">So our vision is clear</strong>
-    </p>
-  </div>
-
   <div class="feature-image-wrapper">
     <img
       src="https://i.postimg.cc/QMWS1Vbd/Untitled-design-(48)-(1).png"
@@ -1003,7 +1007,7 @@
         </div>
         <div class="card-bottom">
           <h2 class="card-title">Warm it up.<br>Watch it move.</h2>
-          <p class="card-desc">We drive <strong>targeted traffic</strong> and close your first few sales <strong>for zero upfront cost</strong>, on commission-based, until organic traffic takes over.</p>
+          <p class="card-desc">We drive <strong>targeted traffic</strong> and close your first few sales <strong>for zero upfront cost</strong>, on a commission basis, until your investment is recovered.</p>
           
         </div>
       </div>
