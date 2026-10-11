@@ -187,12 +187,12 @@
     margin: 2.5rem auto;
     padding: 3rem 2.5rem;
     border-radius: 24px;
-    background: rgba(255, 255, 255, 0.0);
+    background: rgba(0, 0, 0, 0);
     backdrop-filter: blur(14px) saturate(130%);
     -webkit-backdrop-filter: blur(14px) saturate(130%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 2px solid rgb(255, 255, 255);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    color: #e8eaf2;
+    color: #0b0b0b;
   }
   .about-section {
     margin: 0 auto 3rem auto;
@@ -207,7 +207,7 @@
 
   .about-section h2 {
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     font-family: 'Georgia', serif;
     margin-bottom: 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.12);
@@ -226,8 +226,9 @@
   }
 
   h2 {
+    font-family: 'Georgia', serif;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 2.8rem;
     margin-top: 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.12);
     padding-bottom: 0.5rem;
@@ -235,11 +236,12 @@
   }
 
   .price-tag {
+    font-family: 'Georgia', serif;
     background: rgba(255, 255, 255, 0.08);
     padding: 0.5rem 1.2rem;
     border-radius: 10px;
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 2.8rem;
     font-weight: 500;
     color: #ff5d7a;
     margin: 1rem 0 1.5rem 0;
@@ -283,40 +285,34 @@
     width: 100%;
   }
 
- .feature-image {
-  width: 100%;
-  max-width: 720px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 16px;
-  padding: 10px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow:
-    0 24px 60px -18px rgba(0, 0, 0, 0.9),
-    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-    0 0 40px rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  display: block;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.5s ease,
-              border-color 0.5s ease;
-}
-
-.feature-image:hover {
-  transform: translateY(-6px) scale(1.015);
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow:
-    0 40px 90px -20px rgba(0, 0, 0, 0.95),
-    0 0 0 1px rgba(255, 255, 255, 0.12) inset,
-    0 0 60px rgba(255, 255, 255, 0.10);
-}
-  .feature-image:hover {
-    transform: translateY(-4px) scale(1.01);
+  .feature-image {
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 16px;
+    padding: 10px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow:
-      0 30px 70px rgba(0, 0, 0, 0.85),
-      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+      0 24px 60px -18px rgba(0, 0, 0, 0.9),
+      0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+      0 0 40px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.5s ease,
+                border-color 0.5s ease;
+  }
+
+  .feature-image:hover {
+    transform: translateY(-6px) scale(1.015);
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow:
+      0 40px 90px -20px rgba(0, 0, 0, 0.95),
+      0 0 0 1px rgba(255, 255, 255, 0.12) inset,
+      0 0 60px rgba(255, 255, 255, 0.10);
   }
 
   @media (max-width: 700px) {
@@ -329,73 +325,70 @@
     }
   }
 
+  /* ============================================================
+     EXPLANATION BUTTON (with breathing animation)
+     ============================================================ */
+  .explanation-btn {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    background: rgba(8, 235, 4, 0);
+    color: #f9f9f9;
+    border: 5px solid rgba(209, 223, 15, 0.957);
+    border-radius: 60px;
+    padding: 0.8rem 2.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 450;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    animation: btnBreathe 2s ease-in-out infinite;
+    backdrop-filter: blur(10px);
+  }
+  .explanation-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+  }
+  .explanation-btn:active { transform: scale(0.96); }
 
+  @keyframes btnBreathe {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.06); }
+  }
 
+  /* ============================================================
+     PRIMARY BUTTON (neon red)
+     ============================================================ */
+  .btn-primary {
+    display: inline-block;
+    background: #dc354600;
+    color: rgb(252, 251, 251);
+    text-decoration: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 60px;
+    font-weight: 450;
+    font-size: 1rem;
+    border: 5px solid rgba(253, 3, 3, 0.995);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    box-shadow: 0 0 10px rgb(254, 5, 5),
+                0 0 10px rgba(237, 79, 158, 0.993);
+  }
 
-.explanation-btn {
-  display: block;
-  margin: 1.5rem auto 0 auto;
-  background: rgba(8, 235, 4, 0);
-  color: #f9f9f9;
-  border: 5px solid rgba(209, 223, 15, 0.957);
-  border-radius: 60px;
-  padding: 0.8rem 2.5rem;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 450;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  animation: btnBreathe 2s ease-in-out infinite;
-  backdrop-filter: blur(10px);
-}
-.explanation-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: scale(1.02);
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
-}
-.explanation-btn:active { transform: scale(0.96); }
+  .btn-primary:hover {
+    background: #2b2b3f;
+    border-color: #2b2b3f;
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(220, 53, 69, 0.75),
+                0 0 50px rgba(220, 53, 69, 0.45);
+  }
 
-
-@keyframes btnBreathe {
-  0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.06); }
-}
-
-
-
-.btn-primary {
-  display: inline-block;
-  background: #dc354600;
-  color: rgb(252, 251, 251);
-  text-decoration: none;
-  padding: 0.8rem 2.5rem;
-  border-radius: 60px;
-  font-weight: 450;
-  font-size: 1rem;
-  border: 5px solid rgba(253, 3, 3, 0.995);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1.5rem;
-  box-shadow: 0 0 10px rgb(254, 5, 5),
-              0 0 10px rgba(237, 79, 158, 0.993);
-}
-
-.btn-primary:hover {
-  background: #2b2b3f;
-  border-color: #2b2b3f;
-  transform: scale(1.02);
-  box-shadow: 0 0 25px rgba(220, 53, 69, 0.75),
-              0 0 50px rgba(220, 53, 69, 0.45);
-}
-
-.btn-primary:active {
-  transform: scale(0.96);
-}
-
-
-
+  .btn-primary:active {
+    transform: scale(0.96);
+  }
 
   .btn-secondary {
     display: inline-block;
@@ -650,7 +643,7 @@
   .card-label { font-size: 0.68rem; letter-spacing: 3.5px; text-transform: uppercase; font-weight: 600; opacity: 0.75; }
   .card-index { font-family: 'Georgia', serif; font-size: 2.2rem; font-weight: 400; line-height: 1; opacity: 0.18; }
 
-  /* NEW: image slot inside each card */
+  /* image slot inside each card */
   .card-image {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -674,12 +667,11 @@
   .card[data-slide="0"] .card-desc strong,
   .card-desc strong { background: rgba(255,255,255,0.28); }
 
-  /* Bottom section of card (heading lives here now) */
   .card-bottom {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    margin-top: 0.7;
+    margin-top: 0.7rem;
   }
 
   .slideshow-controls { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; }
@@ -874,7 +866,20 @@
   </div>
 </nav>
 
-<!-- HOME / HERO -->
+
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <h2>About Us</h2>
+  <p>
+    Based in the heart of the creative community, our team of developers, designers,
+    and strategists work side-by-side to ensure every pixel, every line of code,
+    and every campaign serves one purpose: <strong>your growth</strong>.
+  </p>
+</section>
+
+
+<!-- HOME / HERO BOX -->
 <div class="container" id="home">
   <h1>Revenue Hub</h1>
 
@@ -888,8 +893,11 @@
   </div>
 
   <button class="explanation-btn" id="explanationBtn"> Learn about Revenue Hub!</button>
+</div>
 
-  <div class="price-tag"> Your Investment</div>
+<!-- INVESTMENT BOX -->
+<div class="container" id="investment">
+  <div class="price-tag">Your Investment</div>
   <p style="font-size: 1.15rem; color: #c8cdde; margin-top: -0.5rem; margin-bottom: 1.5rem; text-align: left;">
     <strong style="color: #4ade80;">Standard website</strong> — Landing, Brochure, or Blog → <strong>Rs.120,000+</strong><br>
     <strong style="color: #4ade80;">E-commerce site</strong> → <strong>Rs.280,000+</strong>
@@ -904,15 +912,12 @@
   </p>
 </div>
 
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <h2>About The Artistic Unity</h2>
-  <p>
-    Based in the heart of the creative community, our team of developers, designers,
-    and strategists work side-by-side to ensure every pixel, every line of code,
-    and every campaign serves one purpose: <strong>your growth</strong>.
-  </p>
-</section>
+
+
+
+
+
+
 
 <!-- SERVICES -->
 <div class="container" id="services" style="margin-top: 0;">
@@ -1003,7 +1008,6 @@
         <div class="card-bottom">
           <h2 class="card-title">You bring the product.<br>We build the rest.</h2>
           <p class="card-desc"> We digitalize your <strong>Products</strong> and <strong>Services</strong> bring them to life on your beautiful Digital Shop.</p>
-  
         </div>
       </div>
 
@@ -1019,7 +1023,6 @@
         <div class="card-bottom">
           <h2 class="card-title">Your Digital Shop.</h2>
           <p class="card-desc">With <strong>web development</strong> we craft the perfect <strong>"place"</strong> to sell — a custom website or app, made for your goals.</p>
-        
         </div>
       </div>
 
@@ -1035,7 +1038,6 @@
         <div class="card-bottom">
           <h2 class="card-title">Warm it up.<br>Watch it move.</h2>
           <p class="card-desc">We drive <strong>targeted traffic</strong> and close your first few sales <strong>for zero upfront cost</strong>, on a commission basis, until your investment is recovered.</p>
-          
         </div>
       </div>
 
@@ -1051,7 +1053,6 @@
         <div class="card-bottom">
           <h2 class="card-title">Product + Place+ Promotion</h2>
           <p class="card-desc"><strong>That's it.</strong> All three, working together — no gaps, no silos. And that is <strong>Revenue Hub</strong>.</p>
-         
         </div>
       </div>
 
